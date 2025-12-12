@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D Innovate People</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="title">
+        <span class="dot"></span>
+        <div>
+          <div class="eyebrow">Инфокарта</div>
+          <h1>D Innovate People</h1>
+        </div>
+      </div>
+      <div class="badges">
+        <div class="badge" id="totalBadge">Всего: 0</div>
+        <div class="badge ghost" id="citiesBadge">Городов: 0</div>
+      </div>
+    </header>
+
+    <section class="grid">
+      <div class="card map-card">
+        <div class="card-head">
+          <div>
+            <p class="label">Живая карта</p>
+            <h2>Где сейчас наша команда</h2>
+          </div>
+        </div>
+        <div id="map"></div>
+      </div>
+
+      <div class="card side-card">
+        <div class="card-head">
+          <div>
+            <p class="label">Быстрые инсайты</p>
+            <h2>Инфографика</h2>
+          </div>
+        </div>
+        <div class="insights" id="insights"></div>
+
+        <div class="barlist">
+          <div class="barlist-head">
+            <span>Страны</span>
+            <span class="muted">людей</span>
+          </div>
+          <div id="countries"></div>
+        </div>
+
+        <div class="barlist">
+          <div class="barlist-head">
+            <span>Топ-городов</span>
+            <span class="muted">доля от общего</span>
+          </div>
+          <div id="bars" class="bars-scroll"></div>
+        </div>
+
+        <div class="offmap">
+          <div class="offmap-head">
+            <span>Вне карты / без координат</span>
+            <span class="muted" id="offmapTotal">0</span>
+          </div>
+          <div id="offmapList"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card wide-card">
+      <div class="card-head">
+        <div>
+          <p class="label">Визуал</p>
+          <h2>Топ-10 городов — доля в общем</h2>
+        </div>
+      </div>
+      <div class="stack" id="stack"></div>
+      <div class="chip-row" id="stackLegend"></div>
+    </section>
+  </div>
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/ol@9.2.4/ol.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/ol@9.2.4/dist/ol.js"></script>
+  <script src="./data.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
+
